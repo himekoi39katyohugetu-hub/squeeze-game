@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>もっちりスクイーズ</title>
+  <link rel="stylesheet" href="squeeze.css" />
+</head>
+<body>
+  <div class="squeeze-app">
+    <h1>もっちりスクイーズ</h1>
+    <p class="subtitle">たくさんムニュムニュして心を癒やそう</p>
+
+    
+    <div class="stats-card">
+  <div class="stat">
+    <div class="stat-label">総ムニュ回数</div>
+    <div class="stat-value" id="counter">0</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">現在のレベル</div>
+    <div class="stat-value level-value" id="level-title">Lv.1 もちもちピンク</div>
+  </div>
+</div>
+
+<div class="daily-card">
+  <div class="stat-label">今日のムニュ回数</div>
+  <div class="stat-value" id="daily-counter">0</div>
+</div>
+
+
+<div class="streak-card">
+  🔥 <span id="streak-counter">1</span>日連続プレイ中
+</div>
+
+    <div class="progress-card">
+      <div class="progress-label">
+        <span id="progress-text">ぷるぷるイエローまであと:100回</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <div class="squeeze-stage">
+      <div class="shadow"></div>
+      <div class="squeeze-float" id="squeeze-float">
+        <div class="squeeze" id="squeeze">
+          <div class="highlight"></div>
+          <div class="cheek cheek-left"></div>
+          <div class="cheek cheek-right"></div>
+          <div class="eye eye-left"></div>
+          <div class="eye eye-right"></div>
+          <div class="mouth"></div>
+          <div class="animal-emoji" id="animal-emoji"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="mood-pick-btn" id="mood-pick-btn">🎲 今日の気分でおまかせ</button>
+     <button class="collection-btn" id="open-collection-btn">
+    📖 すくいーず図鑑を見る (<span id="unlocked-count">1</span>/10)
+    </button>
+    
+
+    <p class="sound-note">Sound enabled via Web Audio API 🎵</p>
+  </div>
+
+  <!-- 図鑑モーダル -->
+  <div id="collection-modal" class="modal">
+    <div class="modal-box">
+      <h2>すくいーず図鑑</h2>
+      <div id="collection-grid" class="collection-grid"></div>
+      <button id="close-collection-btn">閉じる</button>
+    </div>
+  </div>
+
+  <script src="squeeze.js"></script>
+</body>
+</html>
